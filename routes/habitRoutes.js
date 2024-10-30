@@ -1,6 +1,6 @@
 const express = require('express');
 const { getHabits, createHabit, updateHabit, deleteHabit } = require('../controllers/habitController');
-const { protect } = require('../middleware/authmiddleware');
+const { protect } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
