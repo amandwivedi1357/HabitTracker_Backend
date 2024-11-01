@@ -17,6 +17,10 @@ app.use(cors());
 app.use('/api/auth/', userRoutes);
  app.use('/api/habits', habitRoutes);
 
+
+ app.get('/', (req, res) => {
+    res.send('Welcome to the Habit Tracker Backend!');
+});
 // MongoDB connection
 
 
