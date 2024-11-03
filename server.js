@@ -11,11 +11,12 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(bodyParser.json());
-const corsOptions = {
-    origin: ['https://habit-tracker-blush.vercel.app', 'http://localhost:5173'], 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials: true 
-};
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://habit-tracker-blush.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  credentials: true 
+}));
 app.use(cors(corsOptions));
 
 // Routes
